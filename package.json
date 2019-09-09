@@ -1,0 +1,26 @@
+{
+  "name": "cygger",
+  "version": "0.0.1",
+  "description": "Boilerplate generator for API Testing from Swagger to Cypress",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest ./test",
+    "test:watch": "jest --watch ./test",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "cypress:open": "cypress open"
+  },
+  "author": "Alex Ramirez <alexander.ramirez@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "cygger": "./bin/cli.js"
+  },
+  "dependencies": {
+    "commander": "^3.0.1",
+    "swagger-parser": "^8.0.1"
+  },
+  "devDependencies": {
+    "cypress": "^3.4.1",
+    "jest": "^24.9.0"
+  }
+}
