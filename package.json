@@ -2,25 +2,44 @@
   "name": "cygger",
   "version": "0.0.1",
   "description": "Boilerplate generator for API Testing from Swagger to Cypress",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "jest ./test",
-    "test:watch": "jest --watch ./test",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "cypress:open": "cypress open"
+    "test": "jest --verbose ./test/*",
+    "test:watch": "jest --watch --verbose ./test/*",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
   "author": "Alex Ramirez <alexander.ramirez@gmail.com>",
   "license": "MIT",
   "bin": {
     "cygger": "./bin/cli.js"
   },
+  "standard": {
+    "globals": [
+      "describe",
+      "expect",
+      "test"
+    ]
+  },
+  "keywords": [
+    "cypress",
+    "cypress.io",
+    "api-testing",
+    "e2e-testing",
+    "cli",
+    "swagger",
+    "openapi",
+    "test",
+    "testing"
+  ],
   "dependencies": {
     "commander": "^3.0.1",
+    "standard": "^14.3.1",
     "swagger-parser": "^8.0.1"
   },
   "devDependencies": {
-    "cypress": "^3.4.1",
     "jest": "^24.9.0"
   }
 }
